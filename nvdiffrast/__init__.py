@@ -6,6 +6,8 @@
 # distribution of this software and related documentation without an express
 # license agreement from NVIDIA CORPORATION is strictly prohibited.
 
-from importlib.metadata import version
+__version__ = "0.4.0"
 
-__version__ = version(__package__ or 'nvdiffrast')
+from .torch import RasterizeCudaContext, rasterize, antialias, interpolate
+
+__all__ = ['RasterizeCudaContext', 'rasterize', 'antialias', 'interpolate']
